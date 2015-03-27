@@ -1,0 +1,6 @@
+@ListCtrl = ($scope) ->
+  $scope.lists = [
+    {title: "Туторіал"}
+    {title: "Блог"}
+    {title: "Запитання"}
+  ]

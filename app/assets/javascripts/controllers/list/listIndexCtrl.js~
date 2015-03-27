@@ -1,0 +1,6 @@
+@CategoryCtrl = ($scope) ->
+  $scope.categories = [
+    {name: "Туторіал"}
+    {name: "Блог"}
+    {name: "Запитання"}
+  ]

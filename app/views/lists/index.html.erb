@@ -1,0 +1,28 @@
+
+    <h1>SIMPLE TODO LIST</h1>
+    <h3>FROM RUBY GARAGE</h3>
+    <div ng-controller="TodoController">
+ <table ng-repeat="list in lists">
+ <thead>
+  <tr>
+     <th>
+	<span class="done-{{list.done}}">{{list.text}}</span>
+	<a href="" ng-click="removeCategory(list)">X</a>
+     </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+
+   </td>
+  </tr>
+ </tbody>
+ </table>
+    <form ng-submit="addList()">
+    <input type="text" ng-model="listText" size="30"
+    placeholder="add new todo here">
+    <input class="btn-primary" type="submit" value="Add TODO List">
+    </form>
+    </div>
+

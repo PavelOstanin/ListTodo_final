@@ -1,0 +1,5 @@
+$scope.addList = ->
+    $scope.lists.push($scope.newList)
+    $scope.newList= {}
+
+
