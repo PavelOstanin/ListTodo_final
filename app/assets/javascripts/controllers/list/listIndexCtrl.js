@@ -20,7 +20,7 @@ app = angular.module("todoList", []);
 
    $scope.addTask = function(create) {
 	 var index = $scope.lists.indexOf(create);
-         $scope.lists[index].tasks.push({title:$scope.val});
+         $scope.lists[index].tasks.push({title:$scope.taskText});
          $scope.val= '';
    }
 

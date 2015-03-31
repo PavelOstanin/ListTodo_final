@@ -1,11 +1,8 @@
-app = angular.module('todoList', [])
+app = angular.module("todoList", [])
 
 
 app.controller 'TodoController', [
-  '$scope' 
-  'Todo'
-   ($scope, Todo) ->
-   $scope.todos = Todo.query()
+  '$scope'
   ($scope) ->
     $scope.lists = []
 
@@ -13,9 +10,10 @@ app.controller 'TodoController', [
       $scope.lists.push
         text: $scope.listText
       $scope.listText = ''
-      return
 
     $scope.removeCategory = (cat) ->
        $scope.lists.splice($scope.lists.indexOf(cat), 1)
 
 ]
+
+

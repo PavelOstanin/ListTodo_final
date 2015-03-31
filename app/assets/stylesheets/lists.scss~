@@ -57,6 +57,7 @@ th {
     border: 2px solid CornflowerBlue;
     border-radius: 15px;
 }
-.active:hover {
-    background: #FFFACD;
+.activer:hover {
+    background: #FFFACD !important;
+
    }

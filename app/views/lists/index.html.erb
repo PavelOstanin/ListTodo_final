@@ -1,28 +1,46 @@
+<div class="gradient" ng-controller="TodoController">   
+   <h1>SIMPLE TODO LISTS</h1>
+   <h3>FROM RUBY GARAGE</h3>
+    
+   <table ng-repeat="list in lists">
+   <thead>
+      <tr>
+        <th colspan="2">
+          {{list.title}}
+        </th>
+        <th class="nav">
+           <input type="submit" value="X" ng-click="removeList(list)">
+        </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+	<td class="addTask" colspan="3">
+          <form ng-submit="addTask(list)">
+            <input type="text" ng-model="taskText" size="30"
+            placeholder="Start typing here to create a task" >
+            <input class="btn-primary" type="submit" value="Add Task" >
+          </form>
+        </td>
+      </tr>
+      <tr class="active" ng-repeat="task in list.tasks">
+        <td class="chbox">
+	   <input type="checkbox" ng-model="task.done">
+	</td> 
+        <td>
+           <span class="done-{{task.done}}">{{task.title}}</span>
+        </td>
+        <td class="nav">
+           <input type="submit" value="X" ng-click="removeTask(list, task)">
+        </td>
+      </tr>
+   </tbody>
+   </table>
+   <form ng-submit="addList()">
+       <input type="text" ng-model="listText" size="30"
+       placeholder="add new todo here">
+       <input class="btn-primaryt" type="submit" value="Add TODO List">
+   </form>
+</div>
 
-    <h1>SIMPLE TODO LIST</h1>
-    <h3>FROM RUBY GARAGE</h3>
-    <div ng-controller="TodoController">
- <table ng-repeat="list in lists">
- <thead>
-  <tr>
-     <th>
-	<span class="done-{{list.done}}">{{list.text}}</span>
-	<a href="" ng-click="removeCategory(list)">X</a>
-     </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-
-   </td>
-  </tr>
- </tbody>
- </table>
-    <form ng-submit="addList()">
-    <input type="text" ng-model="listText" size="30"
-    placeholder="add new todo here">
-    <input class="btn-primary" type="submit" value="Add TODO List">
-    </form>
-    </div>
 
